@@ -16,7 +16,7 @@ inputs:
     required: true
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
 
 name: 'Server-Side_Testing'
 description: 'Builds the server-side solution and runs server-side testing'
@@ -36,4 +36,4 @@ inputs:
     required: true
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
