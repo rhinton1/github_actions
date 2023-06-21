@@ -1,0 +1,19 @@
+name: Server-Side Testing
+
+on: 
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+
+  annotate-pr:
+    runs-on: ubuntu-latest
+    name: Test Branch Code
+    steps:
+      - name: Server Side Testing
+        uses: ./github_actions@main
+        with:
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          pr_number: ${{ github.event.number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
